@@ -1,318 +1,682 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kamal Bhandari - Professional Resume</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<body>
-    <div class="maindiv">
-        <div class="uppersec">
-            <section class="usec" id="box1"></section>
-            <section class="usec" id="box2">
-                <img src="prof.png" />
-            </section>
-            <section class="usec" id="box3">
-                <h1 id="name" class="text">KAMAL BHANDARI</h1>
-                <h3 id="post" class="text">RESEARCHER & TEACHER</h3>
-                <section class="inf">
-                    <p class="text">ADDRESS: Tarkeshwor Municipality- 2</p>
-                    <p class="text">EMAIL: kamalbhandari465@gmail.com</p>
-                    <p class="text">PHONE: 9843042186</p>
-                </section>
-            </section>
+        :root {
+            --primary: #1a365d;
+            --primary-light: #2c4c7c;
+            --secondary: #e2e8f0;
+            --accent: #ed8936;
+            --bg-light: #f7fafc;
+            --text-primary: #2d3748;
+            --text-secondary: #4a5568;
+            --white: #ffffff;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
 
-            <section class="usec" id="box4"></section>
-        </div>
-        <div class="flexbox">
-            <section class="leftsec">
-                <div class="bar" id="bar1">PERSONAL SUMMARY</div>
-                <p>
-                    Experienced researcher with a passion for utilizing academic
-                    expertise to facilitate social and economic development in Nepal.
-                    Proven track record of conducting high-quality research and teaching
-                    with a strong commitment to excellence. Deep understanding of the
-                    unique challenges facing Nepal and dedicated to collaborating with
-                    experts in academia, government, and civil society to develop
-                    innovative solutions for sustainable progress. Ready to make a
-                    meaningful contribution to Nepal's development and create a brighter
-                    future for the country.
-                </p>
-            </section>
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            background-color: var(--bg-light);
+            color: var(--text-primary);
+            font-size: 1.1rem; /* Increased from default */
+        }
 
-            <section class="rightsec">
-                <div class="bar" id="bar2">PERSONAL INFO</div>
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            background: var(--white);
+            box-shadow: var(--shadow-lg);
+            border-radius: 1rem;
+            overflow: hidden;
+        }
 
-                <ul class="pin">
-                    <li>Date Of Birth: Saturday, December 25, 1982</li>
-                    <li>Gender: Male</li>
-                    <li>Current Address: Tarkeshwor Municipality- 2</li>
-                    <li>Permanent Address: Tarkeshwor Municipality- 2</li>
-                    <li>Marital Status: Married</li>
-                    <li>Spouse Name: Bimala Paudel</li>
-                    <li>Religion:Hindu</li>
-                    <li>Nationality:Nepali</li>
-                    <li>Blood group:O +ve</li>
-                </ul>
-            </section>
-        </div>
+        /* Header Section */
+        .header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            padding: 3rem 2rem;
+            color: var(--white);
+            position: relative;
+        }
 
-        <section class="edu">
-            <div class="bar" id="bar3">EDUCATION</div>
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%232c4c7c' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.5;
+        }
 
-            <table width="100%">
-                <tr>
-                    <th class="yr hd">YEAR</th>
-                    <th class="hd">EDUCATIONAL INSTITUTION</th>
-                    <th class="hd">LEVEL</th>
-                </tr>
-                <tr>
-                    <td class="yr">2019</td>
-                    <td>Central Department Of History, Tribhuvan University</td>
-                    <td>PHD running (Nepal Tibet Trade Route)</td>
-                </tr>
-                <tr>
-                    <td class="yr">2009</td>
-                    <td>Central Department Of History, Tribhuvan University</td>
-                    <td>MASTER (70.50%)</td>
-                </tr>
-               
-                <tr>
-                    <td class="yr">2006</td>
-                    <td>Saraswoti Multiple Campus, Lekhnath Marga, T.U</td>
-                    <td>BACHELOR (B.A) (45%)</td>
-                </tr>
-                <tr>
-                    <td class="yr">2001</td>
-                    <td>Saraswoti Multiple Campus, Lekhnath Marga, T.U</td>
-                    <td>Intermediate Level (MANAGEMENT) (38%)</td>
-                </tr>
-                <tr>
-                    <td class="yr">1999</td>
-                    <td>Gram Sewa Madhyamik Campus, Tarkeshwor Municipality</td>
-                    <td>SLC (49%)</td>
-                </tr>
-            </table>
-        </section>
+        .header-content {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 3rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
 
-        <div class="flexbox1">
-            <section class="leftsec1">
-                <div class="bar" id="bar4">Specilization and Skills</div>
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 4px solid var(--white);
+            box-shadow: var(--shadow);
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
 
-                <div class="skill">
-                    <h2>Research:</h2>
-                    <ul>
-                        <li>
-                            Experienced in conducting independent and collaborative research
-                            projects
-                        </li>
-                        <li>
-                            Proficient in research methodologies and data analysis
-                            techniques
-                        </li>
-                        <li>Published the book 'The Description of the Participation of Nepalese Troops in the First and Second World War'</li>
-                    </ul>
-                </div>
+        .profile-img:hover {
+            transform: scale(1.05);
+        }
 
-                <div class="skill">
-                    <h2>Teaching:</h2>
-                    <ul>
-                        <li>
-                            Experienced in conducting independent and collaborative research
-                            projects
-                        </li>
-                        <li>
-                            Ability to adapt teaching methods to meet the needs of diverse
-                            students
-                        </li>
-                        <li>
-                            Received positive feedback from students on teaching evaluations
-                        </li>
-                    </ul>
-                </div>
+        .name {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem; /* Increased from 3rem */
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
+        }
 
-                <div class="skill">
-                    <h2>History:</h2>
-                    <ul>
-                        <li>
-                            In-depth knowledge of historical events, trends, and figures
-                        </li>
-                        <li>
-                            Ability to contextualize historical events within broader social
-                            and political contexts
-                        </li>
-                        <li>
-                            Skilled in analyzing primary and secondary sources to develop
-                            nuanced interpretations of historical events
-                        </li>
-                    </ul>
-                </div>
+        .title {
+            font-size: 1.8rem; /* Increased from 1.5rem */
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--secondary);
+            margin-bottom: 2rem;
+        }
 
-                <div class="skill">
-                    <h2>Social Communication:</h2>
-                    <ul>
-                        <li>Strong written and verbal communication skills</li>
-                        <li>
-                            Ability to tailor communication style to a variety of audiences
-                            and mediums
-                        </li>
-                        <li>
-                            Experience managing social media accounts and creating engaging
-                            content
-                        </li>
-                    </ul>
-                </div>
+        .contact-info {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
 
-                <div class="skill">
-                    <h2>Counseling:</h2>
-                    <ul>
-                        <li>Compassionate and empathetic approach to counseling</li>
-                        <li>
-                            Ability to create a safe and supportive environment for clients
-                        </li>
-                        <li>
-                            Experience with a range of counseling techniques and modalities
-                        </li>
-                    </ul>
-                </div>
-            </section>
+        .contact-info p {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
 
-            <section class="rightsec1">
-                <div class="bar" id="bar5">WORK Experienced</div>
+        .contact-info i {
+            color: var(--accent);
+        }
 
-                <div class="srightsec">
-                    <section class="sl">
-                        <div class="in" id="in1">
-                            <h2> ♦ Seraphims Public School</h2>
-                            <p>(Kalamati-14,Kathmandu) 2075B.S-2080B.S</p>
-                        </div>
-                        <div class="in" id="in2">
-                            <h2> ♦ Research Work
-                            </h2>
-                            <p>(Nepal Army Headquater)
-                                2076-04-01 to 2077-12-09
-                            </p>
-                        </div>
-                        <div class="in" id="in3">
-                            <h2> ♦ Social Work
-                            </h2>
-                            <p>Gunakeshari Youth Club
-                                (Kalanki-14,Kathmandu)
-                                2065 B.S to 2071 B.S
-                            </p>
-                        </div>
-                        <div class="in" id="in4">
-                            <h2>
-                                ♦ NIBS Education and Vista Services
-                            </h2>
-                            <p>
-                                (Putalisadak,Kathmandu)
-                                2067 B.S to 2070 B.S
-                            </p>
-                        </div>
-                    </section>
+        /* Main Content */
+        .main-content {
+            padding: 3rem 2rem;
+        }
 
-                    <section class="sr">
-                        <div class="inr" id="inr1">
-                            <h2>Managing Director</h2>
-                            <p>
-                                As Managing Director of a school, I developed and executed
-                                strategic plans and policies, monitored physical assets,
-                                recruited and motivated personnel, and assessed human
-                                resources to ensure overall success. Through my leadership,
-                                the school was well-equipped to provide a high-quality
-                                education to its student.
-                            </p>
-                        </div>
-                        <div class="inr" id="inr2">
-                            <h2>Researcher</h2>
-                            <p class="w">
-                                <li class="w">Central library and archive department,Nepal Army
-                                Headquater,Bhadrakali,Kathmandu.</li><br /><br />
+        /* Section Styles */
+        .section {
+            background: var(--white);
+            border-radius: 0.5rem;
+            box-shadow: var(--shadow-sm);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-                                Research Title=“The Description Of The Participation Of
-                                Nepalese Troops In The First And The Second World War”<br /><br />
+        .section:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
 
-                                Book Published (2077/12/29)<br /><br />
+        .section-header {
+            color: var(--primary);
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem; /* Increased from 1.5rem */
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--accent);
+            position: relative;
+        }
 
-                                <b>ISBN:978-9937-0-8951-7</b><br /><br />
-                            </p>
-                            <p class="w">
-                                <li class="w">Certificate of Appreciation from Sri Sainik Central Library (Nepal Army Headquarter, Bhadrakali).</li><br /><br />
-                                Program Title: Ancient Devanagari Script Study Training <br /><br />
-                    
-                                Description: Received a Certificate of Appreciation for my exceptional contribution as a language expert teacher in the Ancient Devanagari script study training program conducted by Sri Sainik Central Library.
-                              
-                            </p>
-                        </div>
+        .section-content {
+            color: var(--text-secondary);
+        }
 
-                        <div class="inr" id="inr3">
-                            <h2>Secretary</h2>
-                            <p>
-                                As Secretary, I played an instrumental role in enhancing the
-                                social duties of youth and community members by delivering
-                                social welfare tasks in various diverse fields. I motivated
-                                them to participate in local-level development activities,
-                                which had a positive impact on the community. My efforts were
-                                aimed at creating a more socially responsible and engaged
-                                community, which ultimately contributed to the overall
-                                development of the area.
-                            </p>
-                        </div>
+        /* Two Column Layout */
+        .two-column {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
 
-                        <div class="inr" id="inr4">
-                            <h2>Counselor</h2>
-                            <p>
-                                As an education counselor, I am committed to providing
-                                high-quality support and mentorship to students as they
-                                navigate their academic journeys. I believe that every student
-                                deserves access to personalized guidance and counseling
-                                service.<br /><br />
+        /* Skills List */
+        .skills-list {
+            list-style: none;
+        }
 
-                                In my role as an education counselor, I have experience
-                                working with students from a diverse range of backgrounds,
-                                including those facing academic challenges, career indecision,
-                                and mental health concerns. I am skilled in using a variety of
-                                counseling techniques to support my clients, including
-                                cognitive-behavioral therapy, solution-focused therapy, and
-                                motivational interviewing.
+        .skills-list li {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
 
-                            </p>
-                        </div>
-                    </section>
-                </div>
-            </section>
-        </div>
-        <div class="bar" id="bar6">HONOURS</div>
-        <p class="hon"><li class="hon">Received testimonials (प्रशंसा पत्र) from Former Chief of army staff (maharathi Pradhan Senapati)
-             purna charda Thapa, Nepal Army Headquarter (2077/12/29).</li><br><br>
+        .skills-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+        }
 
-           <li class="hon"> Received a Certificate of Appreciation for exceptional contributions as a language expert teacher in the Ancient Devanagari script study training program organized by Sri Sainik Central Library (Nepal Army Headquarter, Bhadrakali)
-            (Duration: 2080/02/07 to 2080/03/10).</li>
-        </p>
+        /* Education Table */
+        .education-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            background: var(--white);
+            border-radius: 0.5rem;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
 
-        <div class="bar" id="bar7">REFERENCES</div>
-        <p class="hon1">
-            ● Ass.Prof.Dr.Binod Thapa<br><br>
+        .education-table th {
+            background: var(--primary);
+            color: var(--white);
+            padding: 1.2rem;
+            text-align: left;
+            font-weight: 500;
+            font-size: 1.1rem; /* Increased from default */
+        }
 
-            ● Central Department Of History, Tribhuvan University<br><br>
+        .education-table td {
+            padding: 1.2rem;
+            border-bottom: 1px solid var(--secondary);
+            font-size: 1.1rem; /* Increased from default */
+        }
 
-            ●  E-mail: drbinodthapa@gmail.com<br><br>
+        .education-table tr:last-child td {
+            border-bottom: none;
+        }
 
-            ● Contact no: 9841243238
+        .education-table tr:nth-child(even) {
+            background: var(--bg-light);
+        }
+
+        /* Experience Timeline */
+        .timeline-item {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-left: 2px solid var(--accent);
+        }
+
+        .timeline-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -8px;
+            top: 0;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: var(--accent);
+            border: 2px solid var(--white);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .timeline-title {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem; /* Increased from default */
+        }
+
+        .timeline-period {
+            color: var(--text-secondary);
+            font-size: 1.1rem; /* Increased from 0.9rem */
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .timeline-period i {
+            color: var(--accent);
+        }
+
+        /* Honors List */
+        .honors-list {
+            list-style: none;
+        }
+
+        .honors-list li {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: var(--bg-light);
+            border-radius: 0.5rem;
+            border-left: 3px solid var(--accent);
+        }
+
+        .honors-list li::before {
+            content: '🏆';
+            position: absolute;
+            left: -1.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        /* References */
+        .reference-item {
+            background: var(--bg-light);
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            border-left: 3px solid var(--accent);
+        }
+
+        .reference-item h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 1024px) {
+            .container {
+                margin: 1rem;
+            }
+
+            .name {
+                font-size: 3rem; /* Increased from 2.5rem */
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .header-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 2rem;
+            }
+
+            .profile-img {
+                margin: 0 auto;
+            }
+
+            .contact-info {
+                justify-content: center;
+            }
+
+            .two-column {
+                grid-template-columns: 1fr;
+            }
+
+            .section-header {
+                text-align: center;
+            }
+
+            body {
+                font-size: 1rem; /* Slightly smaller on mobile but still larger than original */
+            }
             
+            .name {
+                font-size: 2.5rem; /* Increased from 2rem */
+            }
+            
+            .title {
+                font-size: 1.5rem; /* Increased from 1.2rem */
+            }
+        }
 
-        </p>
+        @media screen and (max-width: 480px) {
+            .container {
+                margin: 0;
+                border-radius: 0;
+            }
+
+            .header {
+                padding: 2rem 1rem;
+            }
+
+            .main-content {
+                padding: 2rem 1rem;
+            }
+
+            .name {
+                font-size: 2.2rem; /* Increased from 2rem */
+            }
+
+            .title {
+                font-size: 1.3rem; /* Increased from 1.2rem */
+            }
+
+            .education-table {
+                font-size: 1rem; /* Increased from 0.9rem */
+            }
+
+            .education-table th,
+            .education-table td {
+                padding: 0.75rem;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+            }
+
+            .container {
+                margin: 0;
+                box-shadow: none;
+            }
+
+            .section:hover {
+                transform: none;
+                box-shadow: none;
+            }
+
+            .header {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .section-header,
+            .education-table th {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <div class="header-content">
+                <img src="prof.png" alt="Profile" class="profile-img">
+                <div>
+                    <h1 class="name">KAMAL BHANDARI</h1>
+                    <h2 class="title">Researcher & Teacher</h2>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> Tarkeshwor Municipality - 2</p>
+                        <p><i class="fas fa-envelope"></i> kamalbhandari465@gmail.com</p>
+                        <p><i class="fas fa-phone"></i> 9843042186</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <!-- Personal Summary -->
+            <section class="section">
+                <h2 class="section-header">Professional Summary</h2>
+                <div class="section-content">
+                    <p>Experienced researcher with a passion for utilizing academic expertise to facilitate social and economic development in Nepal. Proven track record of conducting high-quality research and teaching with a strong commitment to excellence.</p>
+                </div>
+            </section>
+
+            <!-- Two Column Section -->
+            <div class="two-column">
+                <!-- Personal Info -->
+                <section class="section">
+                    <h2 class="section-header">Personal Information</h2>
+                    <div class="section-content">
+                        <ul class="skills-list">
+                            <li>Date Of Birth: Saturday, December 25, 1982</li>
+                            <li>Gender: Male</li>
+                            <li>Current Address: Tarkeshwor Municipality- 2</li>
+                            <li>Permanent Address: Tarkeshwor Municipality- 2</li>
+                            <li>Marital Status: Married</li>
+                            <li>Spouse Name: Bimala Paudel</li>
+                            <li>Religion: Hindu</li>
+                            <li>Nationality: Nepali</li>
+                            <li>Blood group: O +ve</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Skills -->
+                <section class="section">
+                    <h2 class="section-header">Skills & Expertise</h2>
+                    <div class="section-content">
+                
+                        <h4 class="mb-3 mt-4">Research:</h4>
+                        <ul class="skills-list">
+                            <li>Experienced researcher with expertise in methodologies, data analysis, and published work on Nepalese troops in WWI & WWII.</li>
+                        </ul>
+                        
+                        <h4 class="mb-3 mt-4">Teaching:</h4>
+                        <ul class="skills-list">
+                            <li>Skilled in adapting teaching methods, engaging students, and receiving positive evaluations.</li>
+                        </ul>
+                        
+                        <h4 class="mb-3 mt-4">History:</h4>
+                        <ul class="skills-list">
+                            <li>Deep knowledge of historical events, contextual analysis, and source interpretation.</li>
+                        </ul>
+                        
+                        <h4 class="mb-3 mt-4">Counseling:</h4>
+                        <ul class="skills-list">
+                            <li>Compassionate, supportive, and experienced in diverse counseling techniques.</li>
+                        </ul>
+
+                        <h4 class="mb-3 mt-4">Social Communication:</h4>
+                        <ul class="skills-list">
+                            <li>Strong written/verbal skills, audience-tailored communication, and social media management.</li>
+                        </ul>
+                        
+
+
+
+
+
+
+
+
+
+
+
+
+                    </div>
+                </section>
+            </div>
+
+            <!-- Education -->
+            <section class="section">
+                <h2 class="section-header">Education</h2>
+                <div class="section-content">
+                    <table class="education-table">
+                        <thead>
+                            <tr>
+                                <th>Year</th>
+                                <th>Institution</th>
+                                <th>Level</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2019</td>
+                                <td>Central Department Of History, Tribhuvan University</td>
+                                <td>PHD running (Nepal Tibet Trade Route)</td>
+                            </tr>
+                            <tr>
+                                <td>2009</td>
+                                <td>Central Department Of History, Tribhuvan University</td>
+                                <td>MASTER (70.50%)</td>
+                            </tr>
+                            <tr>
+                                <td>2006</td>
+                                <td>Saraswoti Multiple Campus, T.U</td>
+                                <td>BACHELOR (B.A)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Experience -->
+            <section class="section">
+                <h2 class="section-header">Professional Experience</h2>
+                <div class="section-content">
+
+                    <div class="timeline-item">
+                        <h3 class="timeline-title">lecturer (Part-time)</h3>
+                        <p class="timeline-period">
+                            <i class="fas fa-users"></i>
+                            Saraswati Multiple Campus | Lainchaur, Kathmandu | 2080 - Present
+                        </p>
+                        <p style="text-align: justify;">In my role as a part-time lecturer, I have been responsible for delivering engaging and comprehensive lectures, designing course materials, and evaluating student progress. I have contributed to fostering an interactive learning environment that encourages critical thinking and academic excellence. Additionally, I have mentored students, guided research projects, and collaborated with faculty members to enhance the overall educational experience.</p>
+                    </div>
+
+
+                    <div class="timeline-item">
+                        <h3 class="timeline-title">Managing Director</h3>
+                        <p class="timeline-period">
+                            <i class="fas fa-building"></i>
+                            Seraphims Public School | Kalamati-
+                            14, Kathmandu | 2075 B.S - 2080 B.S
+                        </p>
+                        <p style="text-align: justify;">As Managing Director of a school, I
+                            developed and executed strategic
+                            plans and policies, monitored physical
+                            assets, recruited and motivated
+                            personnel, and assessed human
+                            resources to ensure overall success.
+                            Through my leadership, the school
+                            
+                            was well-equipped to provide a high-
+                            quality education to its student.</p>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <h3 class="timeline-title">Researcher</h3>
+                        <p class="timeline-period">
+                            <i class="fas fa-university"></i>
+                            Nepal Army Headquater | 2076-04-01 to 2077-12-09
+                        </p>
+                        <ul>
+                            <li>Central Library and Archive Department, Nepal Army Headquarters, Bhadrakali, Kathmandu.
+                                <ul>
+                                    <li>Research Title: <i>“The Description of the Participation of Nepalese Troops in the First and Second World War”</i></li>
+                                    <li>Book Published: 2077/12/29</li>
+                                    <li>ISBN: 978-9937-0-8951-7</li>
+                                </ul>
+                            </li>
+                             <br>
+                             
+                             <li>Sri Sainik Central Library (Nepal Army Headquarters, Bhadrakali)
+                                <ul>
+                                    <li>Program Title:<i>"Ancient Devanagari Script Study Training"</i></li>
+                                    <li>Description: Led training on Ancient Devanagari script, teaching its structure and usage.</li>
+                                    <li>Award: Certificate of Appreciation for contribution as a language expert teacher.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                      
+                        
+                        
+                    </div>
+
+                    <div class="timeline-item">
+                        <h3 class="timeline-title">Secretary</h3>
+                        <p class="timeline-period">
+                            <i class="fas fa-users"></i>
+                            Gunakeshari Youth Club | Kalanki-
+                            14, Kathmandu | 2065 B.S to 2071 B.S
+                        </p>
+                        <p style="text-align: justify;">As Secretary, I played an instrumental
+                            role in enhancing the social duties of
+                            youth and community members by
+                            delivering social welfare tasks in
+                            various diverse fields. I motivated
+                            them to participate in local-level
+                            development activities, which had a
+                            positive impact on the community. My
+                            efforts were aimed at creating a more
+                            socially responsible and engaged
+                            community, which ultimately
+                            contributed to the overall development
+                            of the area.</p>
+                    </div>
+
+
+
+                    <div class="timeline-item">
+                        <h3 class="timeline-title">Counselor</h3>
+                        <p class="timeline-period">
+                            <i class="fas fa-users"></i>
+                            NIBS Education and Vista Services | Putalisadak, Kathmandu | 2067 B.S to 2070 B.S
+                        </p>
+                        <p style="text-align: justify;">As an education counselor, I am
+                            committed to providing high-quality
+                            support and mentorship to students as
+                            they navigate their academic journeys.
+                            I believe that every student deserves
+                            access to personalized guidance and
+                            counseling service.
+                            In my role as an education counselor, I
+                            have experience working with students
+                            from a diverse range of backgrounds,
+                            including those facing academic
+                            challenges, career indecision, and
+                            mental health concerns. I am skilled in
+                            using a variety of counseling
+                            techniques to support my clients,
+                            including cognitive-behavioral therapy,
+                            solution-focused therapy, and
+                            motivational interviewing.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Honors -->
+            <section class="section">
+                <h2 class="section-header">Honors & Achievements</h2>
+                <div class="section-content">
+                    <ul class="honors-list">
+                        <li>Received testimonials (प्रशंसा पत्र) from Former Chief of army staff (maharathi Pradhan
+                            Senapati) purna charda Thapa, Nepal Army Headquarter (2077/12/29)</li>
+                        <li>Received a Certificate of Appreciation for exceptional contributions as a language expert
+                            teacher in the Ancient Devanagari script study training program organized by Sri Sainik
+                            Central Library (Nepal Army Headquarter, Bhadrakali) (Duration: 2080/02/07 to 2080/03/10)</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- References -->
+            <section class="section">
+                <h2 class="section-header">Professional References</h2>
+                <div class="section-content">
+                    <div class="reference-item">
+                        <h3>Ass.Prof.Dr.Binod Thapa</h3>
+                        <p>Central Department Of History, Tribhuvan University</p>
+                        <p><i class="fas fa-envelope"></i> E-mail: drbinodthapa@gmail.com</p>
+                        <p><i class="fas fa-phone"></i> 9841243238</p>
+                    </div>
+                </div>
+            </section>
+        </main>
     </div>
-    </div>
-
-
-
-
 </body>
-
 </html>
